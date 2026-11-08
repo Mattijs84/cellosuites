@@ -1,0 +1,253 @@
+<title>Cellosuites Live</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,700;1,500&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: één smalle kolom als een concertprogramma — maandkoppen, per avond een regel met datum, uitvoerder en de zes suites als register. */
+:root {
+  --bg: #eef0f3;
+  --surface: #ffffff;
+  --ink: #1b2230;
+  --muted: #5d6676;
+  --line: #d5d9e1;
+  --accent: #8a2f2a;
+  --accent-soft: #f3e3e1;
+  --suite-off: #e3e6ec;
+  --display: "Spectral", Georgia, "Times New Roman", serif;
+  --body: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12161d; --surface: #1a1f28; --ink: #e7e9ee; --muted: #9aa3b2; --line: #2c3340;
+    --accent: #e08a80; --accent-soft: #3a2324; --suite-off: #262c37; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12161d; --surface: #1a1f28; --ink: #e7e9ee; --muted: #9aa3b2; --line: #2c3340;
+  --accent: #e08a80; --accent-soft: #3a2324; --suite-off: #262c37; color-scheme: dark;
+}
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 860px; margin: 0 auto; padding-block: 40px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header { display: grid; gap: 10px; padding-bottom: 24px; border-bottom: 2px solid var(--ink); }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(34px, 7vw, 54px); line-height: 1.05; margin: 0; text-wrap: balance; }
+h1 em { font-style: italic; font-weight: 500; color: var(--accent); }
+.lede { margin: 0; max-width: 62ch; color: var(--muted); }
+.meta { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding-block: 20px; }
+.chip { font: 500 13px var(--body); border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+  border-radius: 999px; padding: 6px 12px; cursor: pointer; display: inline-flex; gap: 6px; align-items: center; }
+.chip .n { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.chip[aria-pressed="true"] .n { color: var(--bg); opacity: .75; }
+.chip:focus-visible, a:focus-visible, label:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+.toggle { margin-left: auto; display: inline-flex; gap: 8px; align-items: center; font-size: 13px; color: var(--muted); cursor: pointer; }
+.toggle input { accent-color: var(--accent); width: 16px; height: 16px; }
+.month { font-family: var(--display); font-weight: 500; font-style: italic; font-size: 22px; margin: 28px 0 8px; display: flex; align-items: baseline; gap: 10px; }
+.month span { font-family: var(--mono); font-style: normal; font-size: 12px; color: var(--muted); }
+ol.list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.row { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); align-items: start; }
+.date { text-align: center; font-variant-numeric: tabular-nums; }
+.date .d { font-family: var(--display); font-weight: 700; font-size: 30px; line-height: 1; display: block; }
+.date .w { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.main { min-width: 0; display: grid; gap: 4px; }
+.who { font-weight: 600; font-size: 16px; }
+.where { color: var(--muted); }
+.where b { color: var(--ink); font-weight: 500; }
+.prog { font-size: 14px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 4px; }
+.register { display: inline-flex; gap: 2px; font-family: var(--mono); font-size: 11px; }
+.register i { font-style: normal; width: 22px; text-align: center; padding: 2px 0; background: var(--suite-off); color: var(--muted); border-radius: 3px; }
+.register i.on { background: var(--accent); color: var(--surface); }
+.tag { font-family: var(--mono); font-size: 11px; padding: 2px 8px; border-radius: 3px; background: var(--accent-soft); color: var(--accent); }
+.tag.plain { background: var(--suite-off); color: var(--muted); }
+.side { display: grid; gap: 6px; justify-items: end; text-align: right; }
+.cc { font-family: var(--mono); font-size: 12px; font-weight: 500; border: 1px solid var(--line); padding: 1px 6px; border-radius: 3px; }
+.side a { color: var(--accent); font-weight: 500; font-size: 14px; text-decoration: none; white-space: nowrap; }
+.side a:hover { text-decoration: underline; }
+.src { font-size: 12px; color: var(--muted); }
+.empty { padding: 32px 0; color: var(--muted); }
+section.watch { margin-top: 48px; }
+h2 { font-family: var(--display); font-weight: 700; font-size: 24px; margin: 0 0 4px; }
+.watch p.sub { margin: 0 0 12px; color: var(--muted); }
+.wgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.wcard { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 14px; display: grid; gap: 4px; align-content: start; min-width: 0; }
+.wcard .when { font-family: var(--mono); font-size: 12px; color: var(--accent); }
+.wcard .t { font-weight: 600; }
+.wcard p { margin: 0; font-size: 14px; color: var(--muted); }
+.wcard a { color: var(--accent); font-size: 13px; text-decoration: none; }
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); display: grid; gap: 6px; max-width: 70ch; }
+@media (max-width: 560px) {
+  .row { grid-template-columns: 52px minmax(0, 1fr); }
+  .side { grid-column: 2; justify-items: start; text-align: left; grid-auto-flow: column; justify-content: start; align-items: center; gap: 12px; }
+  .toggle { margin-left: 0; }
+}
+@media (prefers-reduced-motion: no-preference) { .chip { transition: background .15s, color .15s; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">BWV 1007–1012 · live in West-Europa</div>
+    <h1>Cellosuites <em>live</em></h1>
+    <p class="lede">Elke uitvoering van Bachs zes suites voor cello solo die we vonden in Nederland, België, Duitsland, Frankrijk, Zwitserland en het Verenigd Koninkrijk, voor de komende twaalf maanden en gesorteerd op datum.</p>
+    <div class="meta" id="meta">Concerten laden…</div>
+  </header>
+
+  <div class="controls" role="group" aria-label="Filter op land">
+    <div id="chips" style="display:flex;flex-wrap:wrap;gap:8px"></div>
+    <label class="toggle" for="onlyComplete"><input type="checkbox" id="onlyComplete"> Alleen alle zes suites</label>
+  </div>
+
+  <div id="list"><p class="empty">De concertlijst wordt geladen.</p></div>
+
+  <section class="watch" id="watchSec" hidden>
+    <h2>Nog niet aangekondigd</h2>
+    <p class="sub">Festivals en tournees waar de suites waarschijnlijk klinken, maar zonder bevestigde datum of programma.</p>
+    <div class="wgrid" id="watch"></div>
+  </section>
+
+  <footer>
+    <div>Het register bij elk concert toont welke suites (I–VI) gespeeld worden, voor zover de zaal dat vermeldt. Grijze blokjes betekenen dat het programma niet per suite bekend is.</div>
+    <div>De lijst wordt samengesteld door het web te doorzoeken op zaalagenda's, festivalprogramma's en concertsites. Controleer datum en tijd altijd bij de zaal voordat je kaartjes koopt.</div>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var COUNTRIES = [
+    ["NL", "Nederland"], ["BE", "België"], ["DE", "Duitsland"],
+    ["FR", "Frankrijk"], ["CH", "Zwitserland"], ["GB", "Verenigd Koninkrijk"]
+  ];
+  var NAMES = Object.fromEntries(COUNTRIES);
+  var ROMAN = ["I", "II", "III", "IV", "V", "VI"];
+  var KEYS = ["G", "d", "C", "E♭", "c", "D"];
+  var state = { country: "ALL", onlyComplete: false, data: null };
+
+  try { var saved = localStorage.getItem("cs-country"); if (saved) state.country = saved; } catch (e) {}
+
+  var fmtMonth = new Intl.DateTimeFormat("nl-NL", { month: "long", year: "numeric" });
+  var fmtDay = new Intl.DateTimeFormat("nl-NL", { weekday: "short" });
+  var fmtLong = new Intl.DateTimeFormat("nl-NL", { day: "numeric", month: "long", year: "numeric" });
+  var fmtShort = new Intl.DateTimeFormat("nl-NL", { day: "numeric", month: "short" });
+
+  function parse(d) { var p = d.split("-"); return new Date(+p[0], +p[1] - 1, +p[2]); }
+  function el(tag, cls, text) { var n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; }
+
+  function inWindow(c) {
+    var today = new Date(); today.setHours(0, 0, 0, 0);
+    var limit = new Date(today); limit.setFullYear(limit.getFullYear() + 1);
+    var end = parse(c.endDate || c.date), start = parse(c.date);
+    return end >= today && start <= limit;
+  }
+
+  function visible() {
+    return state.data.concerts.filter(function (c) {
+      return inWindow(c)
+        && (state.country === "ALL" || c.country === state.country)
+        && (!state.onlyComplete || c.complete);
+    }).sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : (a.time || "").localeCompare(b.time || ""); });
+  }
+
+  function renderChips() {
+    var box = document.getElementById("chips"); box.textContent = "";
+    var all = state.data.concerts.filter(inWindow);
+    var opts = [["ALL", "Alle landen"]].concat(COUNTRIES);
+    opts.forEach(function (o) {
+      var count = o[0] === "ALL" ? all.length : all.filter(function (c) { return c.country === o[0]; }).length;
+      var b = el("button", "chip"); b.type = "button"; b.id = "chip-" + o[0];
+      b.setAttribute("aria-pressed", String(state.country === o[0]));
+      b.append(el("span", null, o[1]), el("span", "n", String(count)));
+      b.addEventListener("click", function () {
+        state.country = o[0];
+        try { localStorage.setItem("cs-country", o[0]); } catch (e) {}
+        render();
+      });
+      box.append(b);
+    });
+  }
+
+  function register(c) {
+    var r = el("span", "register"); r.setAttribute("aria-label", c.suites ? "Suites " + c.suites.join(", ") : "Programma per suite onbekend");
+    ROMAN.forEach(function (n, i) {
+      var on = c.suites ? c.suites.indexOf(i + 1) !== -1 : false;
+      var s = el("i", on ? "on" : "", n); s.title = "Suite " + n + " in " + KEYS[i] + ", BWV " + (1007 + i);
+      r.append(s);
+    });
+    return r;
+  }
+
+  function row(c) {
+    var li = el("li", "row");
+    var d = parse(c.date);
+    var date = el("div", "date");
+    date.append(el("span", "d", String(d.getDate())), el("span", "w", fmtDay.format(d).replace(".", "")));
+    var main = el("div", "main");
+    main.append(el("div", "who", c.performer));
+    var where = el("div", "where"); var b = el("b", null, c.venue);
+    where.append(b, document.createTextNode(" · " + c.city));
+    main.append(where, el("div", "prog", c.program));
+    var tags = el("div", "tags"); tags.append(register(c));
+    if (c.complete) tags.append(el("span", "tag", "integraal"));
+    if (c.endDate) tags.append(el("span", "tag plain", "t/m " + fmtShort.format(parse(c.endDate))));
+    if (c.time) tags.append(el("span", "tag plain", c.time + " uur"));
+    if (c.price) tags.append(el("span", "tag plain", c.price));
+    main.append(tags);
+    var side = el("div", "side");
+    var cc = el("span", "cc", c.country); cc.title = NAMES[c.country] || c.country;
+    var a = el("a", null, "Info & tickets ↗"); a.href = c.url; a.target = "_blank"; a.rel = "noopener";
+    side.append(cc, a, el("span", "src", c.source));
+    li.append(date, main, side);
+    return li;
+  }
+
+  function renderList() {
+    var box = document.getElementById("list"); box.textContent = "";
+    var items = visible();
+    if (!items.length) {
+      var msg = state.country === "BE"
+        ? "Voor België hebben we nog geen uitvoering gevonden in de komende twaalf maanden. Bij een volgende zoekronde kijken we opnieuw bij Flagey, Bozar, deSingel en de Belgium Cello Society."
+        : "Geen concerten met deze filters. Kies een ander land of zet het filter op alle suites uit.";
+      box.append(el("p", "empty", msg)); return;
+    }
+    var groups = {};
+    items.forEach(function (c) { var k = c.date.slice(0, 7); (groups[k] = groups[k] || []).push(c); });
+    Object.keys(groups).sort().forEach(function (k) {
+      var h = el("h3", "month", fmtMonth.format(parse(k + "-01")));
+      h.append(el("span", null, groups[k].length + (groups[k].length === 1 ? " concert" : " concerten")));
+      var ol = el("ol", "list"); groups[k].forEach(function (c) { ol.append(row(c)); });
+      box.append(h, ol);
+    });
+  }
+
+  function renderWatch() {
+    var w = state.data.watch || []; var box = document.getElementById("watch"); box.textContent = "";
+    document.getElementById("watchSec").hidden = !w.length;
+    w.forEach(function (x) {
+      var c = el("div", "wcard");
+      c.append(el("span", "when", x.when + (x.country ? " · " + x.country : "")), el("span", "t", x.title), el("p", null, x.note));
+      var a = el("a", null, "Website ↗"); a.href = x.url; a.target = "_blank"; a.rel = "noopener"; c.append(a);
+      box.append(c);
+    });
+  }
+
+  function render() {
+    renderChips(); renderList(); renderWatch();
+    var n = state.data.concerts.filter(inWindow).length;
+    document.getElementById("meta").textContent = n + " uitvoeringen · laatst doorzocht op " + fmtLong.format(parse(state.data.updated));
+  }
+
+  document.getElementById("onlyComplete").addEventListener("change", function (e) { state.onlyComplete = e.target.checked; renderList(); });
+
+  fetch("concerts.json", { cache: "no-cache" })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (d) { state.data = d; render(); })
+    .catch(function () {
+      document.getElementById("meta").textContent = "De concertlijst kon niet geladen worden.";
+      document.getElementById("list").textContent = "";
+      document.getElementById("list").append(el("p", "empty", "De concertlijst kon niet geladen worden. Vernieuw de pagina om het opnieuw te proberen."));
+    });
+})();
+</script>
