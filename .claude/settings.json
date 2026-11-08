@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python .agents/skills/alchemy-orchestrate/scripts/check_orchestration.py *)",
+      "Bash(python .claude/skills/alchemy-orchestrate/scripts/check_orchestration.py *)",
+      "Bash(python3 .agents/skills/alchemy-orchestrate/scripts/check_orchestration.py *)",
+      "Bash(python3 .claude/skills/alchemy-orchestrate/scripts/check_orchestration.py *)"
+    ],
+    "ask": [
+      "Bash(git push *)",
+      "Bash(gh pr create *)",
+      "Bash(git clean *)"
+    ],
+    "deny": [
+      "Bash(gh pr merge *)",
+      "Bash(git push --force*)",
+      "Bash(git push -f*)",
+      "Bash(git push * --force*)",
+      "Bash(git push * -f*)",
+      "Bash(git push * +*)",
+      "Bash(git reset --hard *)",
+      "Bash(git branch -D *)"
+    ]
+  },
+  "env": {
+    "CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH": "1",
+    "CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS": "3",
+    "CLAUDE_CODE_PRINT_BG_WAIT_CEILING_MS": "3600000"
+  },
+  "worktree": {
+    "baseRef": "head"
+  }
+}
