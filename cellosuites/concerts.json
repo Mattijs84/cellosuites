@@ -1,99 +1,343 @@
 {
   "updated": "2026-11-08",
-  "window": { "from": "2026-11-08", "to": "2027-11-08" },
+  "window": {
+    "from": "2026-11-08",
+    "to": "2027-11-08"
+  },
   "concerts": [
     {
-      "date": "2026-11-15", "time": null, "country": "NL", "city": "'s-Hertogenbosch", "venue": "Willem Twee",
-      "performer": "Ella van Poucke", "program": "Cellosuites van Bach", "suites": null, "complete": false,
-      "price": null, "url": "https://www.ellavanpoucke.com/concerts", "source": "Website van de cellist"
+      "date": "2026-11-15",
+      "time": "14:00",
+      "country": "NL",
+      "city": "'s-Hertogenbosch",
+      "venue": "Willem Twee",
+      "performer": "Ella van Poucke",
+      "program": "Suites 1, 3, 5 en 6",
+      "suites": [
+        1,
+        3,
+        5,
+        6
+      ],
+      "complete": false,
+      "price": null,
+      "url": "https://www.ellavanpoucke.com/concerts",
+      "source": "Website van de cellist"
     },
     {
-      "date": "2026-11-17", "time": "20:00", "country": "DE", "city": "Hamburg", "venue": "Laeiszhalle",
-      "performer": "Jan Vogler", "program": "Alle zes cellosuites op één avond", "suites": [1,2,3,4,5,6], "complete": true,
-      "price": "vanaf €49", "url": "https://www.concerti.de/vermischtes/jan-vogler-bach-cellosuiten-elbphilharmonie/", "source": "concerti.de"
+      "date": "2026-11-17",
+      "time": "20:00",
+      "country": "DE",
+      "city": "Hamburg",
+      "venue": "Laeiszhalle",
+      "performer": "Jan Vogler",
+      "program": "Alle zes cellosuites op één avond",
+      "suites": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "complete": true,
+      "price": "vanaf €49",
+      "url": "https://www.concerti.de/vermischtes/jan-vogler-bach-cellosuiten-elbphilharmonie/",
+      "source": "concerti.de"
     },
     {
-      "date": "2026-11-20", "time": null, "country": "GB", "city": "Londen", "venue": "St Paul's Church (Actors' Church)",
-      "performer": "Bach Cello Suites by Candlelight", "program": "Selectie uit de suites, bij kaarslicht", "suites": null, "complete": false,
-      "price": null, "url": "https://tickets.eventim.co.uk/tour/bach-cello-suites-by-candlelight-cmp", "source": "Eventim"
+      "date": "2026-11-20",
+      "time": null,
+      "country": "GB",
+      "city": "Londen",
+      "venue": "St Paul's Church (Actors' Church)",
+      "performer": "Bach Cello Suites by Candlelight",
+      "program": "Selectie uit de suites, bij kaarslicht",
+      "suites": null,
+      "complete": false,
+      "price": null,
+      "url": "https://tickets.eventim.co.uk/tour/bach-cello-suites-by-candlelight-cmp",
+      "source": "Eventim"
     },
     {
-      "date": "2026-11-21", "time": null, "country": "FR", "city": "Parijs", "venue": "Église Saint-Ephrem des Syriaques",
-      "performer": "Maya Devane", "program": "Suites pour violoncelle seul, bij kaarslicht. Laatste datum van een reeks die sinds augustus loopt.", "suites": null, "complete": false,
-      "price": null, "url": "https://parisjetaime.com/evenement/concert-suites-violoncelle-bach-saint-ephrem-e2531", "source": "Paris je t'aime"
+      "date": "2026-11-21",
+      "time": null,
+      "country": "FR",
+      "city": "Parijs",
+      "venue": "Église Saint-Ephrem des Syriaques",
+      "performer": "Maya Devane",
+      "program": "Suites pour violoncelle seul, bij kaarslicht. Laatste datum van een reeks die sinds augustus loopt.",
+      "suites": null,
+      "complete": false,
+      "price": null,
+      "url": "https://parisjetaime.com/evenement/concert-suites-violoncelle-bach-saint-ephrem-e2531",
+      "source": "Paris je t'aime"
     },
     {
-      "date": "2026-11-22", "time": "17:00", "country": "CH", "city": "Lausanne", "venue": "Église Saint-Laurent",
-      "performer": "Alejandro Marías", "program": "Recital op gamba en cello met Suite nr. 5 in c BWV 1011 (Festival Bach de Lausanne)", "suites": [5], "complete": false,
-      "price": null, "url": "https://festivalbach.ch/programme-billets/agenda/", "source": "Festival Bach de Lausanne"
+      "date": "2026-11-22",
+      "time": "17:00",
+      "country": "CH",
+      "city": "Lausanne",
+      "venue": "Église Saint-Laurent",
+      "performer": "Alejandro Marías",
+      "program": "Recital op gamba en cello met Suite nr. 5 in c BWV 1011 (Festival Bach de Lausanne)",
+      "suites": [
+        5
+      ],
+      "complete": false,
+      "price": null,
+      "url": "https://festivalbach.ch/programme-billets/agenda/",
+      "source": "Festival Bach de Lausanne"
     },
     {
-      "date": "2026-12-02", "time": "17:30", "country": "GB", "city": "Edinburgh", "venue": "New Town Church",
-      "performer": "Chloe Randall", "program": "Bach Cello Suites at Christmas by Candlelight", "suites": null, "complete": false,
-      "price": null, "url": "https://bachtrack.com/search-concerts/work=cello-suite-no-1-in-g-major-bwv1007-bach-js", "source": "Bachtrack"
+      "date": "2026-12-02",
+      "time": "17:30",
+      "country": "GB",
+      "city": "Edinburgh",
+      "venue": "New Town Church",
+      "performer": "Chloe Randall",
+      "program": "Bach Cello Suites at Christmas by Candlelight",
+      "suites": null,
+      "complete": false,
+      "price": null,
+      "url": "https://bachtrack.com/search-concerts/work=cello-suite-no-1-in-g-major-bwv1007-bach-js",
+      "source": "Bachtrack"
     },
     {
-      "date": "2026-12-20", "time": "16:00", "country": "NL", "city": "Nijmegen", "venue": "Thiemeloods",
-      "performer": "Ella van Poucke", "program": "3 suites van Bach, deel 2", "suites": null, "complete": false,
-      "price": null, "url": "https://www.tourspider.nl/nl/evenementen/ella-van-poucke-3-suites-van-bach-deel-2-01ff4a", "source": "Tourspider"
+      "date": "2026-12-20",
+      "time": null,
+      "country": "NL",
+      "city": "Nijmegen",
+      "venue": "Thiemeloods",
+      "performer": "Ella van Poucke",
+      "program": "Suites 1, 3 en 5 (deel 2 van een reeks). Aanvang volgens de zaal 16:00, volgens de cellist 20:00.",
+      "suites": [
+        1,
+        3,
+        5
+      ],
+      "complete": false,
+      "price": null,
+      "url": "https://www.tourspider.nl/nl/evenementen/ella-van-poucke-3-suites-van-bach-deel-2-01ff4a",
+      "source": "Tourspider"
     },
     {
-      "date": "2026-12-29", "time": "20:00", "country": "GB", "city": "Londen", "venue": "St Mary-le-Strand",
-      "performer": "Hannah Lewis", "program": "Bach Cello Suites at Christmas by Candlelight", "suites": [1,2,3], "complete": false,
-      "price": null, "url": "https://bachtrack.com/concert-event/bach-cello-suites-at-christmas-by-candlelight-st-mary-le-strand-29-december-2026/447876", "source": "Bachtrack"
+      "date": "2026-12-29",
+      "time": "20:00",
+      "country": "GB",
+      "city": "Londen",
+      "venue": "St Mary-le-Strand",
+      "performer": "Hannah Lewis",
+      "program": "Bach Cello Suites at Christmas by Candlelight",
+      "suites": [
+        1,
+        2,
+        3
+      ],
+      "complete": false,
+      "price": null,
+      "url": "https://bachtrack.com/concert-event/bach-cello-suites-at-christmas-by-candlelight-st-mary-le-strand-29-december-2026/447876",
+      "source": "Bachtrack"
     },
     {
-      "date": "2026-12-30", "time": "20:00", "country": "GB", "city": "Londen", "venue": "St James's Church, Piccadilly",
-      "performer": "Tabitha Selley", "program": "Bach Cello Suites by Candlelight", "suites": null, "complete": false,
-      "price": null, "url": "https://tickets.eventim.co.uk/tour/bach-cello-suites-by-candlelight-cmp", "source": "Eventim"
+      "date": "2026-12-30",
+      "time": "20:00",
+      "country": "GB",
+      "city": "Londen",
+      "venue": "St James's Church, Piccadilly",
+      "performer": "Tabitha Selley",
+      "program": "Bach Cello Suites by Candlelight",
+      "suites": null,
+      "complete": false,
+      "price": null,
+      "url": "https://tickets.eventim.co.uk/tour/bach-cello-suites-by-candlelight-cmp",
+      "source": "Eventim"
     },
     {
-      "date": "2027-01-10", "time": "14:30", "country": "NL", "city": "Enschede", "venue": "Wilminktheater & Muziekcentrum, kleine zaal",
-      "performer": "Ella van Poucke", "program": "Drie van de zes cellosuites", "suites": null, "complete": false,
-      "price": "€24,50", "url": "https://www.wilminktheater.nl/en/agenda/ella-van-poucke-speelt-bach-rg62", "source": "Wilminktheater"
+      "date": "2027-01-10",
+      "time": "14:30",
+      "country": "NL",
+      "city": "Enschede",
+      "venue": "Wilminktheater & Muziekcentrum, kleine zaal",
+      "performer": "Ella van Poucke",
+      "program": "Suites 2, 3 en 5",
+      "suites": [
+        2,
+        3,
+        5
+      ],
+      "complete": false,
+      "price": "€24,50",
+      "url": "https://www.wilminktheater.nl/en/agenda/ella-van-poucke-speelt-bach-rg62",
+      "source": "Wilminktheater"
     },
     {
-      "date": "2027-02-27", "time": "17:00", "country": "CH", "city": "Genève", "venue": "Le Lyrique",
-      "performer": "Integrale cellosuites, deel 1", "program": "BWV 1007–1012 verdeeld over twee concerten van een uur (27 en 28 februari)", "suites": null, "complete": true,
-      "price": "CHF 25", "url": "https://locg.ch/en/3/180/", "source": "Le Lyrique"
+      "date": "2027-02-14",
+      "time": "11:00",
+      "country": "NL",
+      "city": "Velp",
+      "venue": "Zaal nog niet vermeld",
+      "performer": "Ella van Poucke",
+      "program": "Suites 2, 3 en 5",
+      "suites": [
+        2,
+        3,
+        5
+      ],
+      "complete": false,
+      "price": null,
+      "url": "https://www.ellavanpoucke.com/concerts/velp-nl",
+      "source": "Website van de cellist"
     },
     {
-      "date": "2027-02-28", "time": "11:00", "country": "CH", "city": "Genève", "venue": "Le Lyrique",
-      "performer": "Integrale cellosuites, deel 2", "program": "Vervolg van de cyclus van 27 februari", "suites": null, "complete": true,
-      "price": "CHF 25", "url": "https://locg.ch/en/3/180/", "source": "Le Lyrique"
+      "date": "2027-02-27",
+      "time": "17:00",
+      "country": "CH",
+      "city": "Genève",
+      "venue": "Le Lyrique",
+      "performer": "Integrale cellosuites, deel 1",
+      "program": "BWV 1007–1012 verdeeld over twee concerten van een uur (27 en 28 februari)",
+      "suites": null,
+      "complete": true,
+      "price": "CHF 25",
+      "url": "https://locg.ch/en/3/180/",
+      "source": "Le Lyrique"
     },
     {
-      "date": "2027-03-11", "endDate": "2027-03-14", "time": null, "country": "DE", "city": "Hamburg", "venue": "Elbphilharmonie (Reflektor Sasha Waltz)",
-      "performer": "Anastasia Kobekina & Sasha Waltz", "program": "De cellosuites met dans, in compacte concerten van een uur", "suites": null, "complete": false,
-      "price": null, "url": "https://www.elbphilharmonie.de/en/press/season2627", "source": "Elbphilharmonie"
+      "date": "2027-02-28",
+      "time": "11:00",
+      "country": "CH",
+      "city": "Genève",
+      "venue": "Le Lyrique",
+      "performer": "Integrale cellosuites, deel 2",
+      "program": "Vervolg van de cyclus van 27 februari",
+      "suites": null,
+      "complete": true,
+      "price": "CHF 25",
+      "url": "https://locg.ch/en/3/180/",
+      "source": "Le Lyrique"
     },
     {
-      "date": "2027-03-13", "time": "19:15", "country": "FR", "city": "Parijs", "venue": "La Scala Paris, Piccola Scala",
-      "performer": "Bruno Philippe", "program": "Drie suites pour violoncelle seul", "suites": null, "complete": false,
-      "price": "€15–28", "url": "https://lascala-paris.fr/programmation/suites-pour-violoncelle-seul", "source": "La Scala Paris"
+      "date": "2027-03-11",
+      "endDate": "2027-03-14",
+      "time": null,
+      "country": "DE",
+      "city": "Hamburg",
+      "venue": "Elbphilharmonie (Reflektor Sasha Waltz)",
+      "performer": "Anastasia Kobekina & Sasha Waltz",
+      "program": "De cellosuites met dans, in compacte concerten van een uur",
+      "suites": null,
+      "complete": false,
+      "price": null,
+      "url": "https://www.elbphilharmonie.de/en/press/season2627",
+      "source": "Elbphilharmonie"
     },
     {
-      "date": "2027-04-10", "time": null, "country": "NL", "city": "Amsterdam", "venue": "De Waalse Kerk",
-      "performer": "Ella van Poucke", "program": "Alle zes cellosuites", "suites": [1,2,3,4,5,6], "complete": true,
-      "price": null, "url": "https://dewaalsekerk.nl/muziek/algemene-concerten/ella-van-poucke", "source": "De Waalse Kerk"
+      "date": "2027-03-13",
+      "time": "19:15",
+      "country": "FR",
+      "city": "Parijs",
+      "venue": "La Scala Paris, Piccola Scala",
+      "performer": "Bruno Philippe",
+      "program": "Drie suites pour violoncelle seul",
+      "suites": null,
+      "complete": false,
+      "price": "€15–28",
+      "url": "https://lascala-paris.fr/programmation/suites-pour-violoncelle-seul",
+      "source": "La Scala Paris"
     },
     {
-      "date": "2027-04-16", "time": null, "country": "GB", "city": "Londen", "venue": "St Mary-le-Strand",
-      "performer": "Katherine Jenkinson", "program": "Drie suites bij kaarslicht", "suites": null, "complete": false,
-      "price": "£22–50", "url": "https://feverup.com/m/160756", "source": "Fever"
+      "date": "2027-04-10",
+      "time": "19:00",
+      "country": "NL",
+      "city": "Amsterdam",
+      "venue": "De Waalse Kerk",
+      "performer": "Ella van Poucke",
+      "program": "Alle zes cellosuites",
+      "suites": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "complete": true,
+      "price": null,
+      "url": "https://dewaalsekerk.nl/muziek/algemene-concerten/ella-van-poucke",
+      "source": "De Waalse Kerk"
     },
     {
-      "date": "2027-07-30", "time": null, "country": "GB", "city": "Londen", "venue": "St Mary-le-Strand",
-      "performer": "Raphael Lang", "program": "Drie suites bij kaarslicht", "suites": null, "complete": false,
-      "price": "£22–50", "url": "https://feverup.com/m/160756", "source": "Fever"
+      "date": "2027-04-16",
+      "time": null,
+      "country": "GB",
+      "city": "Londen",
+      "venue": "St Mary-le-Strand",
+      "performer": "Katherine Jenkinson",
+      "program": "Drie suites bij kaarslicht",
+      "suites": null,
+      "complete": false,
+      "price": "£22–50",
+      "url": "https://feverup.com/m/160756",
+      "source": "Fever"
+    },
+    {
+      "date": "2027-07-30",
+      "time": null,
+      "country": "GB",
+      "city": "Londen",
+      "venue": "St Mary-le-Strand",
+      "performer": "Raphael Lang",
+      "program": "Drie suites bij kaarslicht",
+      "suites": null,
+      "complete": false,
+      "price": "£22–50",
+      "url": "https://feverup.com/m/160756",
+      "source": "Fever"
     }
   ],
   "watch": [
-    { "title": "Bachfest Leipzig", "when": "10–20 juni 2027", "country": "DE", "note": "Voorverkoop vanaf 24 november 2026. In 2025 stonden de cellosuites op het programma; voor 2027 nog niet bevestigd.", "url": "https://www.bachfestleipzig.de/" },
-    { "title": "Festival Wonderfeel, Baarn", "when": "9–11 juli 2027", "country": "NL", "note": "In 2026 speelde Joachim Eijlander er de suites. Programma 2027 verwacht begin 2027.", "url": "https://wonderfeel.nl/" },
-    { "title": "Jean-Guihen Queyras, Europese tournee", "when": "februari 2027", "country": null, "note": "Zijn management noemt een tournee met de complete suites, nog zonder zalen.", "url": "https://jeanguihenqueyras.com/concerts/" },
-    { "title": "Klarafestival, Brussel", "when": "10–21 maart 2027", "country": "BE", "note": "Programma nog niet compleet. In 2023 speelde Benjamin Glorieux er alle zes suites op één dag.", "url": "https://klarafestival.brussels/en" },
-    { "title": "Conservatoire royal de Bruxelles, klas barokcello", "when": "datum onbekend", "country": "BE", "note": "Speelt geregeld preludes en dansen uit de suites in de Deense Kerk in Brussel; laatst bekende concert januari 2025.", "url": "https://www.conservatoire.be/evenements/concerts-spectacles/" },
-    { "title": "Mayke Rademakers, Edesche Concertzaal", "when": "datum onbekend", "country": "NL", "note": "Suites 1 en 2 met eigen improvisaties; de zaal noemt nog geen datum.", "url": "https://tickets.edescheconcertzaal.nl/nl/tickets/520-bach-cellosuites-improvisaties-mayke-rademakers-cello" }
+    {
+      "title": "Bachfest Leipzig",
+      "when": "10–20 juni 2027",
+      "country": "DE",
+      "note": "Voorverkoop vanaf 24 november 2026. In 2025 stonden de cellosuites op het programma; voor 2027 nog niet bevestigd.",
+      "url": "https://www.bachfestleipzig.de/"
+    },
+    {
+      "title": "Festival Wonderfeel, Baarn",
+      "when": "9–11 juli 2027",
+      "country": "NL",
+      "note": "In 2026 speelde Joachim Eijlander er de suites. Programma 2027 verwacht begin 2027.",
+      "url": "https://wonderfeel.nl/"
+    },
+    {
+      "title": "Jean-Guihen Queyras, Europese tournee",
+      "when": "februari 2027",
+      "country": null,
+      "note": "Zijn management noemt een tournee met de complete suites, nog zonder zalen.",
+      "url": "https://jeanguihenqueyras.com/concerts/"
+    },
+    {
+      "title": "Klarafestival, Brussel",
+      "when": "10–21 maart 2027",
+      "country": "BE",
+      "note": "Programma nog niet compleet. In 2023 speelde Benjamin Glorieux er alle zes suites op één dag.",
+      "url": "https://klarafestival.brussels/en"
+    },
+    {
+      "title": "Conservatoire royal de Bruxelles, klas barokcello",
+      "when": "datum onbekend",
+      "country": "BE",
+      "note": "Speelt geregeld preludes en dansen uit de suites in de Deense Kerk in Brussel; laatst bekende concert januari 2025.",
+      "url": "https://www.conservatoire.be/evenements/concerts-spectacles/"
+    },
+    {
+      "title": "Mayke Rademakers, Edesche Concertzaal",
+      "when": "datum onbekend",
+      "country": "NL",
+      "note": "Suites 1 en 2 met eigen improvisaties; de zaal noemt nog geen datum.",
+      "url": "https://tickets.edescheconcertzaal.nl/nl/tickets/520-bach-cellosuites-improvisaties-mayke-rademakers-cello"
+    }
   ]
 }
