@@ -304,6 +304,20 @@
       "source": "concerts.paris"
     },
     {
+      "date": "2027-01-23",
+      "time": "20:15",
+      "country": "BE",
+      "city": "Lommel",
+      "venue": "CC De Adelberg, kleine zaal",
+      "performer": "Roel Dieltiens",
+      "program": "Drie van de zes cellosuites",
+      "suites": null,
+      "complete": false,
+      "price": "€16–18",
+      "url": "https://www.ccdeadelberg.be/programma/roel-dieltiens-b5zk",
+      "source": "CC De Adelberg"
+    },
+    {
       "date": "2027-01-27",
       "time": "18:30",
       "country": "BE",
@@ -343,13 +357,13 @@
       "country": "CH",
       "city": "Genève",
       "venue": "Le Lyrique",
-      "performer": "Integrale cellosuites, deel 1",
-      "program": "BWV 1007–1012 verdeeld over twee concerten van een uur (27 en 28 februari)",
+      "performer": "Raphaël Merlin",
+      "program": "Alle zes suites in twee concerten van een uur; dit is deel 1. Voorspel op de Hohe Messe van 2 maart.",
       "suites": null,
       "complete": true,
       "price": "CHF 25",
-      "url": "https://locg.ch/en/3/180/",
-      "source": "Le Lyrique"
+      "url": "https://locg.ch/fr/calendrier/integrales-des-suites-pour-violoncelle-de-bach",
+      "source": "Orchestre de Chambre de Genève"
     },
     {
       "date": "2027-02-28",
@@ -357,13 +371,13 @@
       "country": "CH",
       "city": "Genève",
       "venue": "Le Lyrique",
-      "performer": "Integrale cellosuites, deel 2",
-      "program": "Vervolg van de cyclus van 27 februari",
+      "performer": "Raphaël Merlin",
+      "program": "Alle zes suites in twee concerten van een uur; dit is deel 2. Voorspel op de Hohe Messe van 2 maart.",
       "suites": null,
       "complete": true,
       "price": "CHF 25",
-      "url": "https://locg.ch/en/3/180/",
-      "source": "Le Lyrique"
+      "url": "https://locg.ch/fr/calendrier/integrales-des-suites-pour-violoncelle-de-bach",
+      "source": "Orchestre de Chambre de Genève"
     },
     {
       "date": "2027-03-11",
@@ -395,6 +409,20 @@
       "source": "La Scala Paris"
     },
     {
+      "date": "2027-03-22",
+      "time": "20:00",
+      "country": "FR",
+      "city": "Parijs",
+      "venue": "Hôtel de Bourrienne (Les Nuits de Bourrienne)",
+      "performer": "Christian-Pierre La Marca",
+      "program": "Suites pour violoncelle seul in de historische salons van het hôtel particulier",
+      "suites": null,
+      "complete": false,
+      "price": null,
+      "url": "https://my.weezevent.com/les-nuits-de-bourrienne-4",
+      "source": "Weezevent"
+    },
+    {
       "date": "2027-03-26",
       "time": "12:30",
       "country": "BE",
@@ -410,6 +438,24 @@
       "price": null,
       "url": "https://bachtrack.com/concert-event/marc-sabbah-flagey-studio-1-26-march-2027/443712",
       "source": "Bachtrack"
+    },
+    {
+      "date": "2027-04-08",
+      "time": "20:00",
+      "country": "BE",
+      "city": "Louvain-la-Neuve",
+      "venue": "UCLouvain",
+      "performer": "Marc Sabbah",
+      "program": "Suites 1–3 op altviool. Nog niet bevestigd op de site van UCLouvain.",
+      "suites": [
+        1,
+        2,
+        3
+      ],
+      "complete": false,
+      "price": null,
+      "url": "https://uclouvain.be/fr/decouvrir/culture",
+      "source": "Doorgegeven tip, niet bevestigd"
     },
     {
       "date": "2027-04-10",
