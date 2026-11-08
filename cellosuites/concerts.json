@@ -6,6 +6,20 @@
   },
   "concerts": [
     {
+      "date": "2026-11-14",
+      "time": "16:30",
+      "country": "FR",
+      "city": "Parijs",
+      "venue": "Église Saint-Ephrem des Syriaques",
+      "performer": "Musique et Patrimoine",
+      "program": "Suites pour violoncelle seul bij kaarslicht; de cellist wisselt per avond",
+      "suites": null,
+      "complete": false,
+      "price": "vanaf €25",
+      "url": "https://concerts.paris/events/serie-musique-et-patrimoine-bach-suites-pour-violoncelle",
+      "source": "concerts.paris"
+    },
+    {
       "date": "2026-11-15",
       "time": "14:00",
       "country": "NL",
@@ -47,7 +61,7 @@
     },
     {
       "date": "2026-11-20",
-      "time": null,
+      "time": "20:00",
       "country": "GB",
       "city": "Londen",
       "venue": "St Paul's Church (Actors' Church)",
@@ -61,17 +75,17 @@
     },
     {
       "date": "2026-11-21",
-      "time": null,
+      "time": "16:30",
       "country": "FR",
       "city": "Parijs",
       "venue": "Église Saint-Ephrem des Syriaques",
-      "performer": "Maya Devane",
-      "program": "Suites pour violoncelle seul, bij kaarslicht. Laatste datum van een reeks die sinds augustus loopt.",
+      "performer": "Musique et Patrimoine",
+      "program": "Suites pour violoncelle seul bij kaarslicht; de cellist wisselt per avond",
       "suites": null,
       "complete": false,
-      "price": null,
-      "url": "https://parisjetaime.com/evenement/concert-suites-violoncelle-bach-saint-ephrem-e2531",
-      "source": "Paris je t'aime"
+      "price": "vanaf €25",
+      "url": "https://concerts.paris/events/serie-musique-et-patrimoine-bach-suites-pour-violoncelle",
+      "source": "concerts.paris"
     },
     {
       "date": "2026-11-22",
@@ -90,6 +104,22 @@
       "source": "Festival Bach de Lausanne"
     },
     {
+      "date": "2026-12-01",
+      "time": "19:00",
+      "country": "DE",
+      "city": "Dortmund",
+      "venue": "Konzerthaus Dortmund (Junge Wilde)",
+      "performer": "Timothy Ridout",
+      "program": "Altviolist; recital met Suite nr. 3 in C, BWV 1009, op altviool",
+      "suites": [
+        3
+      ],
+      "complete": false,
+      "price": null,
+      "url": "https://bachtrack.com/concert-event/junge-wilde--timothy-ridout-konzerthaus-dortmund-1-december-2026/439602",
+      "source": "Bachtrack"
+    },
+    {
       "date": "2026-12-02",
       "time": "17:30",
       "country": "GB",
@@ -102,6 +132,52 @@
       "price": null,
       "url": "https://bachtrack.com/search-concerts/work=cello-suite-no-1-in-g-major-bwv1007-bach-js",
       "source": "Bachtrack"
+    },
+    {
+      "date": "2026-12-12",
+      "time": "20:30",
+      "country": "FR",
+      "city": "Parijs",
+      "venue": "Salle Gaveau",
+      "performer": "Edgar Moreau",
+      "program": "Hommage à Pablo Casals, met Suite nr. 3 in C, BWV 1009",
+      "suites": [
+        3
+      ],
+      "complete": false,
+      "price": null,
+      "url": "https://bachtrack.com/concert-event/edgar-moreau--hommage-a-pablo-casals-salle-gaveau-12-december-2026/451378",
+      "source": "Bachtrack"
+    },
+    {
+      "date": "2026-12-19",
+      "time": "16:00",
+      "country": "DE",
+      "city": "Hamburg",
+      "venue": "Laeiszhalle, kleine zaal",
+      "performer": "Sarah Strohm & Angus Webster",
+      "program": "Cello en piano, met Suite nr. 1 in G, BWV 1007, en Schuberts Arpeggione-sonate",
+      "suites": [
+        1
+      ],
+      "complete": false,
+      "price": null,
+      "url": "https://bachtrack.com/concert-event/sarah-strohm-angus-webster-laeiszhalle-kleiner-saal-19-december-2026/447102",
+      "source": "Bachtrack"
+    },
+    {
+      "date": "2026-12-19",
+      "time": "17:30",
+      "country": "FR",
+      "city": "Parijs",
+      "venue": "Église Saint-Ephrem des Syriaques",
+      "performer": "Musique et Patrimoine",
+      "program": "Suites pour violoncelle seul bij kaarslicht; de cellist wisselt per avond",
+      "suites": null,
+      "complete": false,
+      "price": "vanaf €25",
+      "url": "https://concerts.paris/events/serie-musique-et-patrimoine-bach-suites-pour-violoncelle",
+      "source": "concerts.paris"
     },
     {
       "date": "2026-12-20",
@@ -120,6 +196,20 @@
       "price": null,
       "url": "https://www.tourspider.nl/nl/evenementen/ella-van-poucke-3-suites-van-bach-deel-2-01ff4a",
       "source": "Tourspider"
+    },
+    {
+      "date": "2026-12-24",
+      "time": "14:30",
+      "country": "FR",
+      "city": "Parijs",
+      "venue": "Église Saint-Ephrem des Syriaques",
+      "performer": "Musique et Patrimoine",
+      "program": "Suites pour violoncelle seul bij kaarslicht; de cellist wisselt per avond",
+      "suites": null,
+      "complete": false,
+      "price": "vanaf €25",
+      "url": "https://concerts.paris/events/serie-musique-et-patrimoine-bach-suites-pour-violoncelle",
+      "source": "concerts.paris"
     },
     {
       "date": "2026-12-29",
@@ -154,6 +244,34 @@
       "source": "Eventim"
     },
     {
+      "date": "2027-01-01",
+      "time": "17:00",
+      "country": "FR",
+      "city": "Parijs",
+      "venue": "Église Saint-Ephrem des Syriaques",
+      "performer": "Musique et Patrimoine",
+      "program": "Suites pour violoncelle seul bij kaarslicht; de cellist wisselt per avond",
+      "suites": null,
+      "complete": false,
+      "price": "vanaf €25",
+      "url": "https://concerts.paris/events/serie-musique-et-patrimoine-bach-suites-pour-violoncelle",
+      "source": "concerts.paris"
+    },
+    {
+      "date": "2027-01-06",
+      "time": "19:30",
+      "country": "FR",
+      "city": "Parijs",
+      "venue": "Église Saint-Ephrem des Syriaques",
+      "performer": "Musique et Patrimoine",
+      "program": "Suites pour violoncelle seul bij kaarslicht; de cellist wisselt per avond",
+      "suites": null,
+      "complete": false,
+      "price": "vanaf €25",
+      "url": "https://concerts.paris/events/serie-musique-et-patrimoine-bach-suites-pour-violoncelle",
+      "source": "concerts.paris"
+    },
+    {
       "date": "2027-01-10",
       "time": "14:30",
       "country": "NL",
@@ -170,6 +288,36 @@
       "price": "€24,50",
       "url": "https://www.wilminktheater.nl/en/agenda/ella-van-poucke-speelt-bach-rg62",
       "source": "Wilminktheater"
+    },
+    {
+      "date": "2027-01-20",
+      "time": "20:00",
+      "country": "FR",
+      "city": "Parijs",
+      "venue": "Église Saint-Ephrem des Syriaques",
+      "performer": "Musique et Patrimoine",
+      "program": "Suites pour violoncelle seul bij kaarslicht; de cellist wisselt per avond",
+      "suites": null,
+      "complete": false,
+      "price": "vanaf €25",
+      "url": "https://concerts.paris/events/serie-musique-et-patrimoine-bach-suites-pour-violoncelle",
+      "source": "concerts.paris"
+    },
+    {
+      "date": "2027-01-27",
+      "time": "18:30",
+      "country": "BE",
+      "city": "Brussel",
+      "venue": "Flagey, Studio 1",
+      "performer": "Léo Ispir",
+      "program": "Recital met Suite nr. 5 in c, BWV 1011",
+      "suites": [
+        5
+      ],
+      "complete": false,
+      "price": null,
+      "url": "https://bachtrack.com/concert-event/leo-ispir-flagey-studio-1-27-january-2027/443649",
+      "source": "Bachtrack"
     },
     {
       "date": "2027-02-14",
@@ -247,6 +395,23 @@
       "source": "La Scala Paris"
     },
     {
+      "date": "2027-03-26",
+      "time": "12:30",
+      "country": "BE",
+      "city": "Brussel",
+      "venue": "Flagey, Studio 1",
+      "performer": "Marc Sabbah",
+      "program": "Lunchrecital met Suite nr. 2 in d, BWV 1008, en Suite nr. 6 in D, BWV 1012",
+      "suites": [
+        2,
+        6
+      ],
+      "complete": false,
+      "price": null,
+      "url": "https://bachtrack.com/concert-event/marc-sabbah-flagey-studio-1-26-march-2027/443712",
+      "source": "Bachtrack"
+    },
+    {
       "date": "2027-04-10",
       "time": "19:00",
       "country": "NL",
@@ -269,7 +434,7 @@
     },
     {
       "date": "2027-04-16",
-      "time": null,
+      "time": "20:00",
       "country": "GB",
       "city": "Londen",
       "venue": "St Mary-le-Strand",
@@ -283,7 +448,7 @@
     },
     {
       "date": "2027-07-30",
-      "time": null,
+      "time": "20:00",
       "country": "GB",
       "city": "Londen",
       "venue": "St Mary-le-Strand",
