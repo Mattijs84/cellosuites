@@ -64,6 +64,7 @@ ol.list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--l
 .register i.on { background: var(--accent); color: var(--surface); }
 .tag { font-family: var(--mono); font-size: 11px; padding: 2px 8px; border-radius: 3px; background: var(--accent-soft); color: var(--accent); }
 .tag.plain { background: var(--suite-off); color: var(--muted); }
+.tag.unconfirmed { background: transparent; color: var(--accent); border: 1px dashed var(--accent); }
 .side { display: grid; gap: 6px; justify-items: end; text-align: right; }
 .cc { font-family: var(--mono); font-size: 12px; font-weight: 500; border: 1px solid var(--line); padding: 1px 6px; border-radius: 3px; }
 .side a { color: var(--accent); font-weight: 500; font-size: 14px; text-decoration: none; white-space: nowrap; }
@@ -111,6 +112,7 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
 
   <footer>
     <div>Het register bij elk concert toont welke suites (I–VI) gespeeld worden, voor zover de zaal dat vermeldt. Grijze blokjes betekenen dat het programma niet per suite bekend is.</div>
+    <div>Een concert met het label <em>onbevestigd</em> komt uit één bron en staat nog niet op de site van de zaal of de musicus.</div>
     <div>De lijst wordt samengesteld door het web te doorzoeken op zaalagenda's, festivalprogramma's en concertsites. Controleer datum en tijd altijd bij de zaal voordat je kaartjes koopt.</div>
   </footer>
 </div>
@@ -135,7 +137,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": null,
    "url": "https://www.janvogler.com/en-us/schedule/",
-   "source": "Website van de musicus"
+   "source": "Website van de musicus",
+   "confirmed": true
   },
   {
    "date": "2026-11-14",
@@ -149,7 +152,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": "vanaf €30",
    "url": "https://concerts.paris/events/serie-musique-et-patrimoine-bach-suites-pour-violoncelle",
-   "source": "concerts.paris"
+   "source": "concerts.paris",
+   "confirmed": true
   },
   {
    "date": "2026-11-15",
@@ -168,7 +172,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": null,
    "url": "https://www.ellavanpoucke.com/concerts",
-   "source": "Website van de cellist"
+   "source": "Website van de cellist",
+   "confirmed": true
   },
   {
    "date": "2026-11-17",
@@ -189,7 +194,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": true,
    "price": "vanaf €49",
    "url": "https://www.concerti.de/vermischtes/jan-vogler-bach-cellosuiten-elbphilharmonie/",
-   "source": "concerti.de"
+   "source": "concerti.de",
+   "confirmed": true
   },
   {
    "date": "2026-11-20",
@@ -203,7 +209,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": null,
    "url": "https://tickets.eventim.co.uk/tour/bach-cello-suites-by-candlelight-cmp",
-   "source": "Eventim"
+   "source": "Eventim",
+   "confirmed": true
   },
   {
    "date": "2026-11-21",
@@ -217,7 +224,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": "vanaf €30",
    "url": "https://concerts.paris/events/serie-musique-et-patrimoine-bach-suites-pour-violoncelle",
-   "source": "concerts.paris"
+   "source": "concerts.paris",
+   "confirmed": true
   },
   {
    "date": "2026-11-22",
@@ -233,7 +241,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": null,
    "url": "https://festivalbach.ch/programme-billets/agenda/",
-   "source": "Festival Bach de Lausanne"
+   "source": "Festival Bach de Lausanne",
+   "confirmed": true
   },
   {
    "date": "2026-12-01",
@@ -249,7 +258,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": null,
    "url": "https://bachtrack.com/concert-event/junge-wilde--timothy-ridout-konzerthaus-dortmund-1-december-2026/439602",
-   "source": "Bachtrack"
+   "source": "Bachtrack",
+   "confirmed": true
   },
   {
    "date": "2026-12-02",
@@ -267,7 +277,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": null,
    "url": "https://bachtrack.com/concert-event/bach-cello-suites-at-christmas-by-candlelight-edinburgh-new-town-church-2-december-2026/448127",
-   "source": "Bachtrack"
+   "source": "Bachtrack",
+   "confirmed": true
   },
   {
    "date": "2026-12-12",
@@ -283,7 +294,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": null,
    "url": "https://bachtrack.com/concert-event/edgar-moreau--hommage-a-pablo-casals-salle-gaveau-12-december-2026/451378",
-   "source": "Bachtrack"
+   "source": "Bachtrack",
+   "confirmed": true
   },
   {
    "date": "2026-12-17",
@@ -299,7 +311,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": null,
    "url": "https://daniel-mueller-schott.com/concerts/",
-   "source": "Website van de musicus"
+   "source": "Website van de musicus",
+   "confirmed": true
   },
   {
    "date": "2026-12-19",
@@ -315,7 +328,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": null,
    "url": "https://bachtrack.com/concert-event/sarah-strohm-angus-webster-laeiszhalle-kleiner-saal-19-december-2026/447102",
-   "source": "Bachtrack"
+   "source": "Bachtrack",
+   "confirmed": true
   },
   {
    "date": "2026-12-19",
@@ -329,7 +343,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": "vanaf €30",
    "url": "https://concerts.paris/events/serie-musique-et-patrimoine-bach-suites-pour-violoncelle",
-   "source": "concerts.paris"
+   "source": "concerts.paris",
+   "confirmed": true
   },
   {
    "date": "2026-12-20",
@@ -347,7 +362,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": null,
    "url": "https://www.tourspider.nl/nl/evenementen/ella-van-poucke-3-suites-van-bach-deel-2-01ff4a",
-   "source": "Tourspider"
+   "source": "Tourspider",
+   "confirmed": true
   },
   {
    "date": "2026-12-24",
@@ -361,7 +377,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": "vanaf €30",
    "url": "https://concerts.paris/events/serie-musique-et-patrimoine-bach-suites-pour-violoncelle",
-   "source": "concerts.paris"
+   "source": "concerts.paris",
+   "confirmed": true
   },
   {
    "date": "2026-12-29",
@@ -379,7 +396,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": null,
    "url": "https://bachtrack.com/concert-event/bach-cello-suites-at-christmas-by-candlelight-st-mary-le-strand-29-december-2026/447876",
-   "source": "Bachtrack"
+   "source": "Bachtrack",
+   "confirmed": true
   },
   {
    "date": "2026-12-30",
@@ -397,7 +415,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": null,
    "url": "https://tickets.eventim.co.uk/tour/bach-cello-suites-by-candlelight-cmp",
-   "source": "Eventim"
+   "source": "Eventim",
+   "confirmed": true
   },
   {
    "date": "2027-01-01",
@@ -411,7 +430,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": "vanaf €30",
    "url": "https://concerts.paris/events/serie-musique-et-patrimoine-bach-suites-pour-violoncelle",
-   "source": "concerts.paris"
+   "source": "concerts.paris",
+   "confirmed": true
   },
   {
    "date": "2027-01-06",
@@ -425,7 +445,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": "vanaf €30",
    "url": "https://concerts.paris/events/serie-musique-et-patrimoine-bach-suites-pour-violoncelle",
-   "source": "concerts.paris"
+   "source": "concerts.paris",
+   "confirmed": true
   },
   {
    "date": "2027-01-10",
@@ -443,7 +464,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": "€24,50",
    "url": "https://www.wilminktheater.nl/en/agenda/ella-van-poucke-speelt-bach-rg62",
-   "source": "Wilminktheater"
+   "source": "Wilminktheater",
+   "confirmed": true
   },
   {
    "date": "2027-01-20",
@@ -457,7 +479,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": "vanaf €30",
    "url": "https://concerts.paris/events/serie-musique-et-patrimoine-bach-suites-pour-violoncelle",
-   "source": "concerts.paris"
+   "source": "concerts.paris",
+   "confirmed": true
   },
   {
    "date": "2027-01-23",
@@ -471,7 +494,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": "€16–18",
    "url": "https://www.ccdeadelberg.be/programma/roel-dieltiens-b5zk",
-   "source": "CC De Adelberg"
+   "source": "CC De Adelberg",
+   "confirmed": true
   },
   {
    "date": "2027-01-24",
@@ -485,7 +509,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": null,
    "url": "https://www.monpatelin.fr/concert-suites-pour-violoncelle-seul-de-bach-14470-courseulles-sur-mer-a136691.html",
-   "source": "monpatelin.fr"
+   "source": "monpatelin.fr",
+   "confirmed": false
   },
   {
    "date": "2027-01-27",
@@ -501,7 +526,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": null,
    "url": "https://bachtrack.com/concert-event/leo-ispir-flagey-studio-1-27-january-2027/443649",
-   "source": "Bachtrack"
+   "source": "Bachtrack",
+   "confirmed": true
   },
   {
    "date": "2027-02-14",
@@ -519,7 +545,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": null,
    "url": "https://www.ellavanpoucke.com/concerts/velp-nl",
-   "source": "Website van de cellist"
+   "source": "Website van de cellist",
+   "confirmed": true
   },
   {
    "date": "2027-02-27",
@@ -533,7 +560,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": true,
    "price": "CHF 25",
    "url": "https://locg.ch/fr/calendrier/integrales-des-suites-pour-violoncelle-de-bach",
-   "source": "Orchestre de Chambre de Genève"
+   "source": "Orchestre de Chambre de Genève",
+   "confirmed": true
   },
   {
    "date": "2027-02-28",
@@ -547,7 +575,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": true,
    "price": "CHF 25",
    "url": "https://locg.ch/fr/calendrier/integrales-des-suites-pour-violoncelle-de-bach",
-   "source": "Orchestre de Chambre de Genève"
+   "source": "Orchestre de Chambre de Genève",
+   "confirmed": true
   },
   {
    "date": "2027-03-11",
@@ -562,7 +591,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": null,
    "url": "https://www.elbphilharmonie.de/en/press/season2627",
-   "source": "Elbphilharmonie"
+   "source": "Elbphilharmonie",
+   "confirmed": true
   },
   {
    "date": "2027-03-13",
@@ -576,7 +606,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": "€15–28",
    "url": "https://lascala-paris.fr/programmation/suites-pour-violoncelle-seul",
-   "source": "La Scala Paris"
+   "source": "La Scala Paris",
+   "confirmed": true
   },
   {
    "date": "2027-03-22",
@@ -590,7 +621,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": null,
    "url": "https://my.weezevent.com/les-nuits-de-bourrienne-4",
-   "source": "Weezevent"
+   "source": "Weezevent",
+   "confirmed": true
   },
   {
    "date": "2027-03-24",
@@ -607,7 +639,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": null,
    "url": "https://philharmoniedeparis.fr/en/activite/29393",
-   "source": "Philharmonie de Paris"
+   "source": "Philharmonie de Paris",
+   "confirmed": true
   },
   {
    "date": "2027-03-26",
@@ -623,7 +656,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": null,
    "url": "https://bachtrack.com/concert-event/marc-sabbah-flagey-studio-1-26-march-2027/443712",
-   "source": "Bachtrack"
+   "source": "Bachtrack",
+   "confirmed": true
   },
   {
    "date": "2027-04-08",
@@ -641,7 +675,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": null,
    "url": "https://www.marcsabbah.com/schedule",
-   "source": "Website van de musicus"
+   "source": "Website van de musicus",
+   "confirmed": true
   },
   {
    "date": "2027-04-10",
@@ -662,7 +697,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": true,
    "price": null,
    "url": "https://dewaalsekerk.nl/muziek/algemene-concerten/ella-van-poucke",
-   "source": "De Waalse Kerk"
+   "source": "De Waalse Kerk",
+   "confirmed": true
   },
   {
    "date": "2027-04-11",
@@ -676,7 +712,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": null,
    "url": "https://www.marcsabbah.com/schedule",
-   "source": "Website van de musicus"
+   "source": "Website van de musicus",
+   "confirmed": true
   },
   {
    "date": "2027-04-16",
@@ -694,7 +731,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": "£22–50",
    "url": "https://feverup.com/m/160756",
-   "source": "Fever"
+   "source": "Fever",
+   "confirmed": true
   },
   {
    "date": "2027-06-02",
@@ -712,7 +750,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": null,
    "url": "https://www.in-muenchen.de/events/mischa-maisky.html",
-   "source": "in-muenchen.de"
+   "source": "in-muenchen.de",
+   "confirmed": true
   },
   {
    "date": "2027-07-30",
@@ -730,7 +769,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "complete": false,
    "price": "£22–50",
    "url": "https://feverup.com/m/160756",
-   "source": "Fever"
+   "source": "Fever",
+   "confirmed": true
   }
  ],
  "watch": [
@@ -939,6 +979,11 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
     where.append(b, document.createTextNode(" · " + c.city));
     main.append(where, el("div", "prog", c.program));
     var tags = el("div", "tags"); tags.append(register(c));
+    if (c.confirmed === false) {
+      var u = el("span", "tag unconfirmed", "onbevestigd");
+      u.title = "Nog niet bevestigd door de zaal of de musicus";
+      tags.append(u);
+    }
     if (c.complete) tags.append(el("span", "tag", "integraal"));
     if (c.endDate) tags.append(el("span", "tag plain", "t/m " + fmtShort.format(parse(c.endDate))));
     if (c.time) tags.append(el("span", "tag plain", c.time + " uur"));
