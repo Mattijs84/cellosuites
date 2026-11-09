@@ -7,7 +7,6 @@
       "Bash(python3 .claude/skills/alchemy-orchestrate/scripts/check_orchestration.py *)"
     ],
     "ask": [
-      "Bash(git push *)",
       "Bash(gh pr create *)",
       "Bash(git clean *)"
     ],
