@@ -1,4 +1,4 @@
-<title>Cellosuites Live</title>
+<title>Bach Solo Live</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -86,32 +86,44 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
   .side { grid-column: 2; justify-items: start; text-align: left; grid-auto-flow: column; justify-content: start; align-items: center; gap: 12px; }
   .toggle { margin-left: 0; }
 }
-@media (prefers-reduced-motion: no-preference) { .chip { transition: background .15s, color .15s; } }
+.tabs { display: flex; flex-wrap: wrap; gap: 4px 24px; margin-bottom: 20px; border-bottom: 1px solid var(--line); }
+.tab { display: inline-flex; flex-direction: column; gap: 2px; padding: 8px 0 10px; margin-bottom: -1px; text-decoration: none;
+  color: var(--muted); font-weight: 600; font-size: 15px; border-bottom: 3px solid transparent; }
+.tab span { font-family: var(--mono); font-weight: 400; font-size: 11px; letter-spacing: .04em; }
+.tab:hover { color: var(--ink); }
+.tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+.tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.register.wide i { width: 26px; }
+@media (prefers-reduced-motion: no-preference) { .chip, .tab { transition: background .15s, color .15s, border-color .15s; } }
 </style>
 
 <div class="wrap">
+  <nav class="tabs" role="tablist" aria-label="Kies de werken">
+    <a class="tab" role="tab" id="tab-cello" href="#cello" aria-selected="true">Cellosuites <span>BWV 1007–1012</span></a>
+    <a class="tab" role="tab" id="tab-viool" href="#viool" aria-selected="false">Vioolsonates &amp; partita's <span>BWV 1001–1006</span></a>
+  </nav>
   <header>
-    <div class="eyebrow">BWV 1007–1012 · live in West-Europa</div>
-    <h1>Cellosuites <em>live</em></h1>
-    <p class="lede">Elke uitvoering van Bachs zes suites voor cello solo die we vonden in Nederland, België, Duitsland, Frankrijk, Zwitserland en het Verenigd Koninkrijk, voor de komende twaalf maanden en gesorteerd op datum.</p>
+    <div class="eyebrow" id="eyebrow">BWV 1007–1012 · live in West-Europa</div>
+    <h1><span id="h1Text">Cellosuites</span> <em>live</em></h1>
+    <p class="lede" id="lede">Elke uitvoering van Bachs zes suites voor cello solo die we vonden in Nederland, België, Duitsland, Frankrijk, Zwitserland en het Verenigd Koninkrijk, voor de komende twaalf maanden en gesorteerd op datum.</p>
     <div class="meta" id="meta">Concerten laden…</div>
   </header>
 
   <div class="controls" role="group" aria-label="Filter op land">
     <div id="chips" style="display:flex;flex-wrap:wrap;gap:8px"></div>
-    <label class="toggle" for="onlyComplete"><input type="checkbox" id="onlyComplete"> Alleen alle zes suites</label>
+    <label class="toggle" for="onlyComplete"><input type="checkbox" id="onlyComplete"> <span id="toggleText">Alleen alle zes suites</span></label>
   </div>
 
   <div id="list"><p class="empty">De concertlijst wordt geladen.</p></div>
 
   <section class="watch" id="watchSec" hidden>
     <h2>Nog niet aangekondigd</h2>
-    <p class="sub">Festivals en tournees waar de suites waarschijnlijk klinken, maar zonder bevestigde datum of programma.</p>
+    <p class="sub" id="watchSub">Festivals en tournees waar de suites waarschijnlijk klinken, maar zonder bevestigde datum of programma.</p>
     <div class="wgrid" id="watch"></div>
   </section>
 
   <footer>
-    <div>Het register bij elk concert toont welke suites (I–VI) gespeeld worden, voor zover de zaal dat vermeldt. Grijze blokjes betekenen dat het programma niet per suite bekend is.</div>
+    <div id="registerNote">Het register bij elk concert toont welke suites (I–VI) gespeeld worden, voor zover de zaal dat vermeldt. Grijze blokjes betekenen dat het programma niet per suite bekend is.</div>
     <div>Een concert met het label <em>onbevestigd</em> komt uit één bron en staat nog niet op de site van de zaal of de musicus.</div>
     <div>De lijst wordt samengesteld door het web te doorzoeken op zaalagenda's, festivalprogramma's en concertsites. Controleer datum en tijd altijd bij de zaal voordat je kaartjes koopt.</div>
   </footer>
@@ -904,6 +916,379 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
  ]
 }
 </script>
+<script id="violin-data" type="application/json">
+{
+ "updated": "2026-11-11",
+ "window": {
+  "from": "2026-11-11",
+  "to": "2027-11-11"
+ },
+ "concerts": [
+  {
+   "date": "2026-11-17",
+   "time": "19:30",
+   "country": "GB",
+   "city": "Londen",
+   "venue": "Wigmore Hall",
+   "performer": "Joshua Bell & Peter Dugan",
+   "program": "Recital met Partita nr. 2 in d, BWV 1004, naast Beethoven, Ravel en Saint-Saëns",
+   "suites": [
+    4
+   ],
+   "complete": false,
+   "price": null,
+   "url": "https://www.wigmore-hall.org.uk/whats-on/202611171930",
+   "source": "Wigmore Hall",
+   "confirmed": true
+  },
+  {
+   "date": "2026-11-17",
+   "time": "20:30",
+   "country": "FR",
+   "city": "Versailles",
+   "venue": "Chapelle St Symphorien",
+   "performer": "David Braccini",
+   "program": "Integrale van de sonates en partita's",
+   "suites": null,
+   "complete": true,
+   "price": "vanaf €33",
+   "url": "https://concerts.paris/en/events/serie-j-s-bach-integrale-des-sonates-et-partitas-pour",
+   "source": "concerts.paris",
+   "confirmed": false
+  },
+  {
+   "date": "2026-11-22",
+   "time": "11:00",
+   "country": "BE",
+   "city": "Brussel",
+   "venue": "Bozar, Henry Le Bœufzaal",
+   "performer": "Ava Bahari",
+   "program": "Recital met Partita nr. 2 in d, BWV 1004",
+   "suites": [
+    4
+   ],
+   "complete": false,
+   "price": null,
+   "url": "https://bachtrack.com/concert-event/ava-bahari-palais-des-beaux-arts-bozar-henry-le-boeuf-concert-hall-22-november-2026/449777",
+   "source": "Bachtrack",
+   "confirmed": true
+  },
+  {
+   "date": "2026-11-22",
+   "time": "15:00",
+   "country": "NL",
+   "city": "Wijchen",
+   "venue": "Kasteel Wijchen",
+   "performer": "Jeroen de Groot",
+   "program": "Bach Solo: alle sonates en partita's (met Theater 't Mozaïek)",
+   "suites": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "complete": true,
+   "price": "€21,50",
+   "url": "https://inwijchen.nl/evenement/jeroen-de-groot-bach-solo",
+   "source": "InWijchen",
+   "confirmed": true
+  },
+  {
+   "date": "2026-11-24",
+   "time": "19:30",
+   "country": "GB",
+   "city": "Londen",
+   "venue": "St John the Baptist Church, Wimbledon",
+   "performer": "Painting and Music",
+   "program": "Programma met Sonate nr. 3 in C, BWV 1005",
+   "suites": [
+    5
+   ],
+   "complete": false,
+   "price": null,
+   "url": "https://bachtrack.com/concert-event/painting-and-music-st-john-the-baptist-church-wimbledon-24-november-2026/449459",
+   "source": "Bachtrack",
+   "confirmed": true
+  },
+  {
+   "date": "2026-12-01",
+   "time": "19:00",
+   "country": "DE",
+   "city": "Dortmund",
+   "venue": "Konzerthaus Dortmund (Junge Wilde)",
+   "performer": "Timothy Ridout",
+   "program": "Altviolist; recital met Sonate nr. 2 in a, BWV 1003, op altviool",
+   "suites": [
+    3
+   ],
+   "complete": false,
+   "price": null,
+   "url": "https://bachtrack.com/concert-event/junge-wilde--timothy-ridout-konzerthaus-dortmund-1-december-2026/439602",
+   "source": "Bachtrack",
+   "confirmed": true
+  },
+  {
+   "date": "2026-12-13",
+   "time": "11:00",
+   "country": "DE",
+   "city": "Essen",
+   "venue": "Aalto-Theater",
+   "performer": "Kammerkonzert III: Barocke Weihnachten",
+   "program": "Kamerconcert met Sonate nr. 1 in g, BWV 1001",
+   "suites": [
+    1
+   ],
+   "complete": false,
+   "price": null,
+   "url": "https://bachtrack.com/concert-event/kammerkonzert-iii-barocke-weihnachten-aalto-theater-13-december-2026/451770",
+   "source": "Bachtrack",
+   "confirmed": true
+  },
+  {
+   "date": "2026-12-16",
+   "time": "20:30",
+   "country": "FR",
+   "city": "Versailles",
+   "venue": "Chapelle St Symphorien",
+   "performer": "David Braccini",
+   "program": "Integrale van de sonates en partita's",
+   "suites": null,
+   "complete": true,
+   "price": "vanaf €33",
+   "url": "https://concerts.paris/en/events/serie-j-s-bach-integrale-des-sonates-et-partitas-pour",
+   "source": "concerts.paris",
+   "confirmed": false
+  },
+  {
+   "date": "2026-12-17",
+   "time": "20:30",
+   "country": "FR",
+   "city": "Versailles",
+   "venue": "Chapelle St Symphorien",
+   "performer": "David Braccini",
+   "program": "Integrale van de sonates en partita's",
+   "suites": null,
+   "complete": true,
+   "price": "vanaf €33",
+   "url": "https://concerts.paris/en/events/serie-j-s-bach-integrale-des-sonates-et-partitas-pour",
+   "source": "concerts.paris",
+   "confirmed": false
+  },
+  {
+   "date": "2027-01-20",
+   "time": "20:00",
+   "country": "BE",
+   "city": "Brugge",
+   "venue": "Concertgebouw Brugge (Bach Academie)",
+   "performer": "Noé Soulier & Il Convito",
+   "program": "Dansvoorstelling Close Up met Sonate nr. 2 in a, BWV 1003",
+   "suites": [
+    3
+   ],
+   "complete": false,
+   "price": null,
+   "url": "https://bachtrack.com/concert-event/close-up-concertgebouw-brugge-concert-hall-20-january-2027/440841",
+   "source": "Bachtrack",
+   "confirmed": true
+  },
+  {
+   "date": "2027-02-25",
+   "time": null,
+   "country": "DE",
+   "city": "Leipzig",
+   "venue": "Gewandhaus",
+   "performer": "Gidon Kremer",
+   "program": "Sonates en partita's (bij zijn nieuwe opname); programma per avond niet vermeld",
+   "suites": null,
+   "complete": false,
+   "price": null,
+   "url": "https://ecmrecords.com/product/johann-sebastian-bach-the-sonatas-and-partitas-for-violin-solo-gidon-kremer/",
+   "source": "ECM Records",
+   "confirmed": false
+  },
+  {
+   "date": "2027-02-26",
+   "time": null,
+   "country": "DE",
+   "city": "Leipzig",
+   "venue": "Gewandhaus",
+   "performer": "Gidon Kremer",
+   "program": "Sonates en partita's (bij zijn nieuwe opname); programma per avond niet vermeld",
+   "suites": null,
+   "complete": false,
+   "price": null,
+   "url": "https://ecmrecords.com/product/johann-sebastian-bach-the-sonatas-and-partitas-for-violin-solo-gidon-kremer/",
+   "source": "ECM Records",
+   "confirmed": false
+  },
+  {
+   "date": "2027-03-10",
+   "time": "19:00",
+   "country": "CH",
+   "city": "Windisch",
+   "venue": "Reformierte Kirche",
+   "performer": "Sebastian Bohren",
+   "program": "«Sei solo»: alle sonates en partita's",
+   "suites": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "complete": true,
+   "price": "collecte (richtprijs CHF 50)",
+   "url": "https://strettaconcerts.com/",
+   "source": "Stretta Concerts",
+   "confirmed": true
+  },
+  {
+   "date": "2027-03-19",
+   "time": "19:00",
+   "country": "GB",
+   "city": "Londen",
+   "venue": "Milton Court Concert Hall (Barbican)",
+   "performer": "Isabelle Faust",
+   "program": "Solo Bach Marathon: alle werken voor viool solo op één avond",
+   "suites": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "complete": true,
+   "price": null,
+   "url": "https://www.barbican.org.uk/whats-on/2027/event/isabelle-faust-solo-bach-marathon",
+   "source": "Barbican",
+   "confirmed": true
+  },
+  {
+   "date": "2027-03-21",
+   "time": "11:00",
+   "country": "FR",
+   "city": "Parijs",
+   "venue": "Philharmonie de Paris, Grande salle Pierre Boulez",
+   "performer": "Daniel Lozakovich",
+   "program": "Partita nr. 2 en 3 en Sonate nr. 1",
+   "suites": [
+    1,
+    4,
+    6
+   ],
+   "complete": false,
+   "price": null,
+   "url": "https://philharmoniedeparis.fr/en/calendar",
+   "source": "Philharmonie de Paris",
+   "confirmed": true
+  },
+  {
+   "date": "2027-03-21",
+   "time": "16:00",
+   "country": "DE",
+   "city": "Berlijn",
+   "venue": "Pierre Boulez Saal",
+   "performer": "Isabelle Faust",
+   "program": "Alle sonates en partita's, BWV 1001–1006",
+   "suites": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "complete": true,
+   "price": null,
+   "url": "https://www.concerti.ch/termine/j-s-bach-sonaten-und-partiten-bwv-1001-1006-pierre-boulez-saal-985490/",
+   "source": "concerti.ch",
+   "confirmed": false
+  },
+  {
+   "date": "2027-03-22",
+   "time": "20:00",
+   "country": "DE",
+   "city": "Frankfurt",
+   "venue": "Alte Oper, Mozart Saal",
+   "performer": "2 × hören: Bach",
+   "program": "Gespreksconcert waarin Partita nr. 2 in d, BWV 1004, twee keer klinkt",
+   "suites": [
+    4
+   ],
+   "complete": false,
+   "price": null,
+   "url": "https://bachtrack.com/concert-event/2-horen-bach-alte-oper-mozart-saal-22-march-2027/451172",
+   "source": "Bachtrack",
+   "confirmed": true
+  },
+  {
+   "date": "2027-04-27",
+   "time": "19:30",
+   "country": "DE",
+   "city": "Hannover",
+   "venue": "NDR Konzerthaus, Kleiner Sendesaal",
+   "performer": "Nikola Meeuwsen",
+   "program": "Pianist; recital met Partita nr. 2 in d, BWV 1004, in bewerking voor piano",
+   "suites": [
+    4
+   ],
+   "complete": false,
+   "price": null,
+   "url": "https://bachtrack.com/concert-event/nikola-meeuwsen-ndr-konzerthaus-kleiner-sendesaal-27-april-2027/440370",
+   "source": "Bachtrack",
+   "confirmed": true
+  },
+  {
+   "date": "2027-06-20",
+   "time": "16:00",
+   "country": "DE",
+   "city": "Keulen",
+   "venue": "Kölner Philharmonie (Rising Stars)",
+   "performer": "Ava Bahari",
+   "program": "Recital met Partita nr. 2 in d, BWV 1004",
+   "suites": [
+    4
+   ],
+   "complete": false,
+   "price": null,
+   "url": "https://bachtrack.com/concert-event/rising-stars-ava-bahari-kolner-philharmonie-20-june-2027/451094",
+   "source": "Bachtrack",
+   "confirmed": true
+  },
+  {
+   "date": "2027-06-26",
+   "time": "15:00",
+   "country": "GB",
+   "city": "Londen",
+   "venue": "Queen Elizabeth Hall (Southbank Centre)",
+   "performer": "Brodsky Quartet",
+   "program": "Strijkkwartet; programma rond Beethoven met Sonate nr. 3 in C, BWV 1005, in bewerking",
+   "suites": [
+    5
+   ],
+   "complete": false,
+   "price": null,
+   "url": "https://bachtrack.com/concert-event/brodsky-quartet-beethoven--now-then-forever-southbank-centre-queen-elizabeth-hall-26-june-2027/450389",
+   "source": "Bachtrack",
+   "confirmed": true
+  }
+ ],
+ "watch": [
+  {
+   "title": "Festival de Bret, Nérac",
+   "when": "seizoen 2027",
+   "country": "FR",
+   "note": "Integrale van de werken voor viool in twee delen; deel 2 volgt in 2027, nog zonder datum.",
+   "url": "https://www.festivalbret.com/concerts/bach-integrale-des-oeuvres-pour-violon-acte-i/"
+  }
+ ],
+ "agendas": []
+}
+</script>
 <script>
 (function () {
   var COUNTRIES = [
@@ -911,9 +1296,32 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
     ["FR", "Frankrijk"], ["CH", "Zwitserland"], ["GB", "Verenigd Koninkrijk"]
   ];
   var NAMES = Object.fromEntries(COUNTRIES);
-  var ROMAN = ["I", "II", "III", "IV", "V", "VI"];
-  var KEYS = ["G", "d", "C", "E♭", "c", "D"];
-  var state = { country: "ALL", onlyComplete: false, data: null };
+  var WORKS = {
+    cello: {
+      block: "concert-data", wide: false,
+      eyebrow: "BWV 1007–1012 · live in West-Europa", title: "Cellosuites", unit: "Suites",
+      lede: "Elke uitvoering van Bachs zes suites voor cello solo die we vonden in Nederland, België, Duitsland, Frankrijk, Zwitserland en het Verenigd Koninkrijk, voor de komende twaalf maanden en gesorteerd op datum.",
+      toggle: "Alleen alle zes suites",
+      watchSub: "Festivals en tournees waar de suites waarschijnlijk klinken, maar zonder bevestigde datum of programma.",
+      registerNote: "Het register bij elk concert toont welke suites (I–VI) gespeeld worden, voor zover de zaal dat vermeldt. Grijze blokjes betekenen dat het programma niet per suite bekend is.",
+      labels: ["I", "II", "III", "IV", "V", "VI"],
+      names: ["Suite I in G", "Suite II in d", "Suite III in C", "Suite IV in E♭", "Suite V in c", "Suite VI in D"],
+      bwv: 1007
+    },
+    viool: {
+      block: "violin-data", wide: true,
+      eyebrow: "BWV 1001–1006 · live in West-Europa", title: "Vioolsonates & partita's", unit: "Werken",
+      lede: "Elke uitvoering van Bachs drie sonates en drie partita's voor viool solo die we vonden in Nederland, België, Duitsland, Frankrijk, Zwitserland en het Verenigd Koninkrijk, voor de komende twaalf maanden en gesorteerd op datum.",
+      toggle: "Alleen de complete cyclus",
+      watchSub: "Festivals en tournees waar de sonates en partita's waarschijnlijk klinken, maar zonder bevestigde datum of programma.",
+      registerNote: "Het register bij elk concert toont welke werken gespeeld worden: S1–S3 zijn de sonates, P1–P3 de partita's, in de volgorde van BWV 1001–1006. Grijze blokjes betekenen dat het programma niet per werk bekend is.",
+      labels: ["S1", "P1", "S2", "P2", "S3", "P3"],
+      names: ["Sonate nr. 1 in g", "Partita nr. 1 in b", "Sonate nr. 2 in a", "Partita nr. 2 in d", "Sonate nr. 3 in C", "Partita nr. 3 in E"],
+      bwv: 1001
+    }
+  };
+  var state = { tab: "cello", country: "ALL", onlyComplete: false, data: null, sets: {} };
+  function work() { return WORKS[state.tab]; }
 
   try { var saved = localStorage.getItem("cs-country"); if (saved) state.country = saved; } catch (e) {}
 
@@ -959,10 +1367,14 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
   }
 
   function register(c) {
-    var r = el("span", "register"); r.setAttribute("aria-label", c.suites ? "Suites " + c.suites.join(", ") : "Programma per suite onbekend");
-    ROMAN.forEach(function (n, i) {
+    var w = work();
+    var r = el("span", w.wide ? "register wide" : "register");
+    r.setAttribute("aria-label", c.suites
+      ? w.unit + ": " + c.suites.map(function (n) { return w.names[n - 1]; }).join(", ")
+      : "Programma per werk onbekend");
+    w.labels.forEach(function (n, i) {
       var on = c.suites ? c.suites.indexOf(i + 1) !== -1 : false;
-      var s = el("i", on ? "on" : "", n); s.title = "Suite " + n + " in " + KEYS[i] + ", BWV " + (1007 + i);
+      var s = el("i", on ? "on" : "", n); s.title = w.names[i] + ", BWV " + (w.bwv + i);
       r.append(s);
     });
     return r;
@@ -1001,10 +1413,7 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
     var box = document.getElementById("list"); box.textContent = "";
     var items = visible();
     if (!items.length) {
-      var msg = state.country === "BE"
-        ? "Voor België hebben we nog geen uitvoering gevonden in de komende twaalf maanden. Bij een volgende zoekronde kijken we opnieuw bij Flagey, Bozar, deSingel en de Belgium Cello Society."
-        : "Geen concerten met deze filters. Kies een ander land of zet het filter op alle suites uit.";
-      box.append(el("p", "empty", msg)); return;
+      box.append(el("p", "empty", "Geen concerten met deze filters. Kies een ander land of zet het filter op de complete cyclus uit.")); return;
     }
     var groups = {};
     items.forEach(function (c) { var k = c.date.slice(0, 7); (groups[k] = groups[k] || []).push(c); });
@@ -1027,21 +1436,43 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
     });
   }
 
+  function setText(id, text) { document.getElementById(id).textContent = text; }
+
+  function renderTabs() {
+    var w = work();
+    Object.keys(WORKS).forEach(function (k) {
+      document.getElementById("tab-" + k).setAttribute("aria-selected", String(k === state.tab));
+    });
+    setText("eyebrow", w.eyebrow); setText("h1Text", w.title); setText("lede", w.lede);
+    setText("toggleText", w.toggle); setText("watchSub", w.watchSub); setText("registerNote", w.registerNote);
+  }
+
   function render() {
+    renderTabs();
+    state.data = state.sets[state.tab];
+    if (!state.data) {
+      setText("meta", "De concertlijst kon niet gelezen worden.");
+      document.getElementById("chips").textContent = "";
+      document.getElementById("watchSec").hidden = true;
+      var box = document.getElementById("list"); box.textContent = "";
+      box.append(el("p", "empty", "Deze concertlijst is beschadigd. De volgende update op maandag zet hem opnieuw neer."));
+      return;
+    }
     renderChips(); renderList(); renderWatch();
     var n = state.data.concerts.filter(inWindow).length;
-    document.getElementById("meta").textContent = n + " uitvoeringen · laatst doorzocht op " + fmtLong.format(parse(state.data.updated));
+    setText("meta", n + " uitvoeringen · laatst doorzocht op " + fmtLong.format(parse(state.data.updated)));
   }
+
+  function tabFromHash() { return location.hash === "#viool" ? "viool" : "cello"; }
 
   document.getElementById("onlyComplete").addEventListener("change", function (e) { state.onlyComplete = e.target.checked; renderList(); });
+  window.addEventListener("hashchange", function () { state.tab = tabFromHash(); render(); });
 
-  try {
-    state.data = JSON.parse(document.getElementById("concert-data").textContent);
-    render();
-  } catch (e) {
-    document.getElementById("meta").textContent = "De concertlijst kon niet gelezen worden.";
-    document.getElementById("list").textContent = "";
-    document.getElementById("list").append(el("p", "empty", "De concertlijst in deze pagina is beschadigd. De volgende update op maandag zet hem opnieuw neer."));
-  }
+  Object.keys(WORKS).forEach(function (k) {
+    try { state.sets[k] = JSON.parse(document.getElementById(WORKS[k].block).textContent); }
+    catch (e) { state.sets[k] = null; }
+  });
+  state.tab = tabFromHash();
+  render();
 })();
 </script>

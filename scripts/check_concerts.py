@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Validate the concert-data block embedded in cellosuites/index.html.
+"""Validate the data blocks embedded in cellosuites/index.html.
+
+Checks both concert lists: concert-data (cello suites, BWV 1007-1012) and
+violin-data (violin sonatas and partitas, BWV 1001-1006). In both, "suites"
+holds work numbers 1-6 in BWV order.
 
 Usage: python3 scripts/check_concerts.py [path/to/index.html]
 Exits 1 and lists every problem when the data would break or mislead the page.
@@ -12,7 +16,7 @@ import sys
 FIELDS = {"date", "time", "country", "city", "venue", "performer", "program",
           "suites", "complete", "price", "url", "source", "confirmed"}
 COUNTRIES = {"NL", "BE", "DE", "FR", "CH", "GB"}
-BLOCK = re.compile(r'<script id="concert-data" type="application/json">(.*?)</script>', re.S)
+BLOCKS = ("concert-data", "violin-data")  # cello suites, violin sonatas & partitas
 
 
 def iso(value):
@@ -24,13 +28,21 @@ def iso(value):
 
 
 def check(html):
-    found = BLOCK.findall(html)
+    problems = []
+    for block_id in BLOCKS:
+        problems += [f"{block_id}: {p}" for p in check_block(html, block_id)]
+    return problems
+
+
+def check_block(html, block_id):
+    pattern = re.compile(rf'<script id="{block_id}" type="application/json">(.*?)</script>', re.S)
+    found = pattern.findall(html)
     if len(found) != 1:
-        return [f"expected 1 concert-data block, found {len(found)}"]
+        return [f"expected 1 block, found {len(found)}"]
     try:
         data = json.loads(found[0])
     except json.JSONDecodeError as e:
-        return [f"concert-data is not valid JSON: {e}"]
+        return [f"not valid JSON: {e}"]
 
     problems = []
     missing_keys = {"updated", "window", "concerts", "watch", "agendas"} - set(data)
