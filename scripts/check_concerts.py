@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Validate the data blocks embedded in cellosuites/index.html.
 
-Checks both concert lists: concert-data (cello suites, BWV 1007-1012) and
-violin-data (violin sonatas and partitas, BWV 1001-1006). In both, "suites"
-holds work numbers 1-6 in BWV order.
+Checks the three concert lists: concert-data (cello suites, BWV 1007-1012),
+violin-data (violin sonatas and partitas, BWV 1001-1006) and passion-data
+(St Matthew and St John Passion, BWV 244-245). "suites" holds work numbers in
+BWV order: 1-6 for cello and violin, 1-2 for the Passions.
 
 Usage: python3 scripts/check_concerts.py [path/to/index.html]
 Exits 1 and lists every problem when the data would break or mislead the page.
@@ -16,7 +17,7 @@ import sys
 FIELDS = {"date", "time", "country", "city", "venue", "performer", "program",
           "suites", "complete", "price", "url", "source", "confirmed"}
 COUNTRIES = {"NL", "BE", "DE", "FR", "CH", "GB"}
-BLOCKS = ("concert-data", "violin-data")  # cello suites, violin sonatas & partitas
+BLOCKS = {"concert-data": 6, "violin-data": 6, "passion-data": 2}  # block id -> number of works
 
 
 def iso(value):
@@ -29,12 +30,12 @@ def iso(value):
 
 def check(html):
     problems = []
-    for block_id in BLOCKS:
-        problems += [f"{block_id}: {p}" for p in check_block(html, block_id)]
+    for block_id, works in BLOCKS.items():
+        problems += [f"{block_id}: {p}" for p in check_block(html, block_id, works)]
     return problems
 
 
-def check_block(html, block_id):
+def check_block(html, block_id, works):
     pattern = re.compile(rf'<script id="{block_id}" type="application/json">(.*?)</script>', re.S)
     found = pattern.findall(html)
     if len(found) != 1:
@@ -66,9 +67,11 @@ def check_block(html, block_id):
         suites = c.get("suites")
         if suites is not None and not (
             isinstance(suites, list) and suites
-            and all(isinstance(s, int) and not isinstance(s, bool) and 1 <= s <= 6 for s in suites)
+            and all(isinstance(s, int) and not isinstance(s, bool) and 1 <= s <= works for s in suites)
         ):
-            problems.append(f"{where}: suites must be null or a list of 1-6")
+            problems.append(f"{where}: suites must be null or a list of 1-{works}")
+        if "distance" in c and not isinstance(c["distance"], str):
+            problems.append(f"{where}: distance must be text")
         if not str(c.get("url", "")).startswith("https://"):
             problems.append(f"{where}: url must start with https://")
         if not isinstance(c.get("confirmed"), bool):
