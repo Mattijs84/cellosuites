@@ -72,6 +72,8 @@ def check_block(html, block_id, works):
             problems.append(f"{where}: suites must be null or a list of 1-{works}")
         if "distance" in c and not isinstance(c["distance"], str):
             problems.append(f"{where}: distance must be text")
+        if "amateur" in c and not isinstance(c["amateur"], bool):
+            problems.append(f"{where}: amateur must be true or false")
         if not str(c.get("url", "")).startswith("https://"):
             problems.append(f"{where}: url must start with https://")
         if not isinstance(c.get("confirmed"), bool):

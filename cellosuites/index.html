@@ -1268,6 +1268,24 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
  "concerts": [
   {
    "date": "2027-03-13",
+   "time": null,
+   "country": "NL",
+   "city": "Amsterdam",
+   "venue": "Het Concertgebouw",
+   "performer": "KCOV Amsterdam",
+   "program": "Matthäus-Passion; alleen vermeld in de Christelijke Concertagenda, aanvangstijd niet gevonden.",
+   "suites": [
+    1
+   ],
+   "complete": true,
+   "price": null,
+   "url": "https://www.christelijkeconcertagenda.nl/concertdetails/47432/KCOV%20Amsterdam%20zingt%20Matth%C3%A4us%20Passion%20Het%20Concertgebouw",
+   "source": "Christelijke Concertagenda",
+   "confirmed": false,
+   "amateur": true
+  },
+  {
+   "date": "2027-03-13",
    "time": "19:00",
    "country": "NL",
    "city": "Amsterdam",
@@ -1282,6 +1300,24 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "url": "https://www.muziekgebouw.nl/nl/agenda/matthaus-passion-nwlg",
    "source": "Muziekgebouw aan 't IJ",
    "confirmed": true
+  },
+  {
+   "date": "2027-03-18",
+   "time": "19:30",
+   "country": "NL",
+   "city": "Haarlem",
+   "venue": "PHIL Haarlem",
+   "performer": "Toonkunstkoor Amsterdam, Concertgebouw Kamerorkest",
+   "program": "Matthäus-Passion, in een traditie die teruggaat tot 1899.",
+   "suites": [
+    1
+   ],
+   "complete": true,
+   "price": "€ 34–52",
+   "url": "https://philhaarlem.nl/agenda/toonkunstkoor-amsterdam-concertgebouw-kamerorkest-2027",
+   "source": "PHIL Haarlem",
+   "confirmed": true,
+   "amateur": true
   },
   {
    "date": "2027-03-19",
@@ -1472,6 +1508,42 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
    "confirmed": true
   },
   {
+   "date": "2027-03-26",
+   "time": "19:30",
+   "country": "NL",
+   "city": "Haarlem",
+   "venue": "PHIL Haarlem",
+   "performer": "COV Haarlem",
+   "program": "Matthäus-Passion, het traditionele Goede Vrijdag-concert (de 128e uitvoering door de COV Haarlem).",
+   "suites": [
+    1
+   ],
+   "complete": true,
+   "price": null,
+   "url": "https://philhaarlem.nl/en/agenda/matthaus-passion",
+   "source": "PHIL Haarlem",
+   "confirmed": true,
+   "amateur": true
+  },
+  {
+   "date": "2027-03-26",
+   "time": "19:30",
+   "country": "NL",
+   "city": "Amsterdam",
+   "venue": "Het Concertgebouw",
+   "performer": "Toonkunstkoor Amsterdam, Concertgebouw Kamerorkest",
+   "program": "Matthäus-Passion op Goede Vrijdag volgens de agenda van het Toonkunstkoor; de vermelding is onduidelijk gedateerd en nog niet door het Concertgebouw bevestigd.",
+   "suites": [
+    1
+   ],
+   "complete": true,
+   "price": null,
+   "url": "https://www.toonkunstkoor.nl/concerten/",
+   "source": "Toonkunstkoor Amsterdam",
+   "confirmed": false,
+   "amateur": true
+  },
+  {
    "date": "2027-03-27",
    "time": "11:30",
    "country": "NL",
@@ -1655,6 +1727,11 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
       var u = el("span", "tag unconfirmed", "onbevestigd");
       u.title = "Nog niet bevestigd door de zaal of de musicus";
       tags.append(u);
+    }
+    if (c.amateur) {
+      var am = el("span", "tag plain", "amateurkoor");
+      am.title = "Amateurkoor met beroepsorkest en -solisten";
+      tags.append(am);
     }
     if (c.complete) tags.append(el("span", "tag", "integraal"));
     if (c.endDate) tags.append(el("span", "tag plain", "t/m " + fmtShort.format(parse(c.endDate))));
